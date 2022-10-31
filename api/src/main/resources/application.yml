@@ -1,0 +1,32 @@
+spring:
+#  rest:
+#    pathmatch:
+#    matching-strategy: rest_path_matcher
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-description: Flyway Scripts
+    #    locations: classpath:/migration
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    url: ${spring.datasource.url}
+#    default-schema: training_records_schema
+    out-of-order: true
+    ignore-migration-patterns: '*:ignored'
+    schemas: training_records_schema
+  datasource:
+    hikari:
+      jdbc-url: "jdbc:postgresql://localhost:5432/training_records"
+      maximum-pool-size: 10
+      driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: "jdbc:postgresql://localhost:5432/training_records"
+server:
+  port: 8081
+
+---
+
+jwt:
+  secret: zaqxwcde1234567890
+  expiration: 60000
