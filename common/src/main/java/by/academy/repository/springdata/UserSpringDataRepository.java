@@ -59,4 +59,11 @@ public interface UserSpringDataRepository extends
                            @Param("gender") String gender,
                            @Param("id") Long userId);
 
+    //  SOFT delete user
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update training_records_schema.users set " +
+            "is_deleted = 'true' where id = :id", nativeQuery = true)
+    void softDeleteUser(@Param("id") Long userId);
+
 }

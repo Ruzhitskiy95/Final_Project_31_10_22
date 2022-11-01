@@ -29,4 +29,33 @@ public interface TrainingJournalSpringDataRepository extends
                                       @Param("sets") Long sets,
                                       @Param("reps") Long reps,
                                       @Param("weight") Long weight);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update training_records_schema.training_journal SET " +
+            "training_data = :training_data, " +
+            "user_id = :user_id, " +
+            "exercise_id = :exercise_id, " +
+            "sets = :sets, " +
+            "reps = :reps, " +
+            "weight = :weight " +
+            "where id = :id", nativeQuery = true)
+
+    void updateTrainingJournalSuccess(@Param("training_data") Timestamp training_data,
+                                      @Param("user_id") Long user_id,
+                                      @Param("exercise_id") Long exercise_id,
+                                      @Param("sets") Long sets,
+                                      @Param("reps") Long reps,
+                                      @Param("weight") Long weight,
+                                      @Param("id") Long id);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update training_records_schema.training_journal SET " +
+            "is_deleted = 'true' where id = :id", nativeQuery = true)
+
+    void deleteTrainingJournal(@Param("id") Long id);
 }
+
+
+

@@ -83,4 +83,75 @@ public class TrainingJournalController {
         return new ResponseEntity<>(model, HttpStatus.OK);
     }
 
+    @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
+    @Operation(summary = "Update training", description = "Update training")
+    @PostMapping("/updateTrainingJournal")
+    @Transactional
+    public ResponseEntity<Object> updateTrainingJournal(
+
+            @RequestParam("training_data") @Parameter(
+                    description = "Training Data") Timestamp trainingData,
+            @RequestParam("user_id") @Parameter(
+                    description = "User id") Long userId,
+            @RequestParam("exercise_id") @Parameter(
+                    description = "Exercise id") Long exerciseId,
+            @RequestParam("sets") @Parameter(
+                    description = "Sets") Long sets,
+            @RequestParam("reps") @Parameter(
+                    description = "Reps") Long reps,
+            @RequestParam("weight") @Parameter(
+                    description = "Weight") Long weight,
+            @RequestParam("id") @Parameter(
+                    description = "id") Long id
+            )
+    {
+
+        trainingJournalSpringDataRepository.updateTrainingJournalSuccess(
+                trainingData, userId, exerciseId, sets, reps, weight, id);
+
+        Map<String, Object> model = new HashMap<>();
+        model.put("training_data", trainingData);
+        model.put("user_id", userId);
+        model.put("exercise_id", exerciseId);
+        model.put("sets", sets);
+        model.put("reps", reps);
+        model.put("weight", weight);
+        model.put("id", id);
+
+        return new ResponseEntity<>(model, HttpStatus.OK);
+    }
+//          HARD DELETE
+    @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
+    @Operation(summary = "HARD Delete training by id", description = "HARD Delete training by id")
+    @GetMapping("/HardDelete")
+    public String  trainingJournalDeleteByIdEndpoint(
+            @RequestParam("id") @Parameter(
+                    description = "Training id") Long userId)
+    {
+        trainingJournalSpringDataRepository.deleteById(userId);
+        return "Training has been deleted";
+    }
+
+    //          SOFT DELETE
+    @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
+    @Operation(summary = "SOFT Delete training by id", description = "SOFT Delete training by id")
+    @PostMapping("/softDelete")
+    @Transactional
+    public ResponseEntity<Object> deleteTrainingJournal(
+
+            @RequestParam("id") @Parameter(
+                    description = "id") Long id
+    )
+    {
+
+        trainingJournalSpringDataRepository.deleteTrainingJournal(id);
+
+        Map<String, Object> model = new HashMap<>();
+
+        model.put("id", id);
+
+        return new ResponseEntity<>(model, HttpStatus.OK);
+    }
+
 }
+

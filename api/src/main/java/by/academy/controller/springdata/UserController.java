@@ -88,8 +88,8 @@ public class UserController {
 
 
 @Tag(name = "Endpoint for user", description = "CRUD operation for user")
-@Operation(summary = "Delete user by id", description = "Delete user by id")
-@GetMapping("/delete")
+@Operation(summary = "HARD Delete user by id", description = "HARD Delete user by id")
+@GetMapping("/HardDelete")
 public String  userDeleteByIdEndpoint(
         @RequestParam("id") @Parameter(
                 description = "User id") Long userId)
@@ -187,4 +187,16 @@ public String  userDeleteByIdEndpoint(
 
         return new ResponseEntity<>(model, HttpStatus.OK);
     }
+    //  SOFT DELETE USER
+    @Tag(name = "Endpoint for user", description = "CRUD operation for user")
+    @Operation(summary = "SOFT Delete user by id", description = "SOFT Delete user by id")
+    @GetMapping("/softDelete")
+    public String  userSoftDeleteByIdEndpoint(
+            @RequestParam("id") @Parameter(
+                    description = "User id") Long userId)
+    {
+        userSpringDataRepository.softDeleteUser(userId);
+        return "user has been deleted";
+    }
+
 }
