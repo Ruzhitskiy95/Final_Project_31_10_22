@@ -10,12 +10,16 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -41,7 +45,7 @@ public class UserController {
     @Operation(summary = "Select user by id", description = "Select user by id")
     @GetMapping("/findById")
     public ResponseEntity<Object> userFindByIdEndpoint(
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "User id") Long userId)
     {
 
@@ -91,7 +95,7 @@ public class UserController {
 @Operation(summary = "HARD Delete user by id", description = "HARD Delete user by id")
 @GetMapping("/HardDelete")
 public String  userDeleteByIdEndpoint(
-        @RequestParam("id") @Parameter(
+        @RequestParam("id") @Min(1) @Parameter(
                 description = "User id") Long userId)
 {
     userSpringDataRepository.deleteById(userId);
@@ -103,19 +107,19 @@ public String  userDeleteByIdEndpoint(
     @PutMapping("/updateUserParam")
     public ResponseEntity<Object> userUpdateByIdEndpoint(
 
-            @RequestParam("user_name") @Parameter(
+            @RequestParam("user_name") @Size(min = 1, max = 50) @Parameter(
                     description = "User name") String userName,
-            @RequestParam("sur_name") @Parameter(
+            @RequestParam("sur_name") @Size(min = 1, max = 50) @Parameter(
                     description = "User sur_name") String surName,
             @RequestParam("birth_date") @Parameter(
                     description = "User birth_date") Timestamp birthDate,
-            @RequestParam("user_login") @Parameter(
+            @RequestParam("user_login") @Size(min = 1, max = 50) @Parameter(
                     description = "User login") String userLogin,
-            @RequestParam("user_password") @Parameter(
+            @RequestParam("user_password") @Size(min = 8, max = 50)@Parameter(
                     description = "User password") String userPassword,
             @RequestParam("gender") @Parameter(
                     description = "User gender") Gender gender,
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "User id") Long userId)
     {
 
@@ -192,7 +196,7 @@ public String  userDeleteByIdEndpoint(
     @Operation(summary = "SOFT Delete user by id", description = "SOFT Delete user by id")
     @GetMapping("/softDelete")
     public String  userSoftDeleteByIdEndpoint(
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "User id") Long userId)
     {
         userSpringDataRepository.softDeleteUser(userId);

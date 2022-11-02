@@ -12,19 +12,9 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.3</version>
-<!--        <version>2.3.1.RELEASE</version>-->
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
-    <!--    <version>1.0.1</version>-->
-    <!--    <version>1.0.20220714205800000</version>-->
-    <!--    <version>1.0.003d72c2bb2f</version>-->
-
-    <!--    1.1.2 or 1.0-SNAPSHOT-->
-    <!--    1 - major version of artifact-->
-    <!--    1 - minor update of artifact-->
-    <!--    2 - minor update of minor update artifact-->
-    <!--    SNAPSHOT - not for production usage-->
     <modules>
         <module>common</module>
         <module>api</module>
@@ -41,13 +31,8 @@
         <spring.boot.version>2.7.3</spring.boot.version>
         <lombok.version.custom>1.18.22</lombok.version.custom>
         <jwt.version>0.9.1</jwt.version>
-<!--        <swagger.version>2.9.2</swagger.version>-->
         <swagger.version>3.0.0</swagger.version>
     </properties>
-
-    <!--    <packaging>war</packaging>-->
-    <!--    <packaging>ear</packaging>-->
-    <!--    <packaging>tar</packaging>-->
 
     <dependencies>
         <dependency>
@@ -202,6 +187,8 @@
             <artifactId>hibernate-jpamodelgen</artifactId>
         </dependency>
 
+        <!-- -Caffeine (cash)-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
@@ -211,19 +198,7 @@
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
         </dependency>
-        <!-- -SWAGGER2-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-<!--        <dependency>-->
-<!--            <groupId>io.springfox</groupId>-->
-<!--            <artifactId>springfox-swagger2</artifactId>-->
-<!--            <version>${swagger.version}</version>-->
-<!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>io.springfox</groupId>-->
-<!--            <artifactId>springfox-swagger-ui</artifactId>-->
-<!--            <version>${swagger.version}</version>-->
-<!--        </dependency>-->
         <!-- -SWAGGER3-->
                         <dependency>
                             <groupId>org.springdoc</groupId>
@@ -236,55 +211,6 @@
                             <artifactId>springdoc-openapi-webflux-ui</artifactId>
                             <version>1.6.4</version>
                         </dependency>
-
-        <!--          Entity into  DTO-->
-<!--        <dependency>-->
-<!--            <groupId>org.modelmapper</groupId>-->
-<!--            <artifactId>modelmapper</artifactId>-->
-<!--            <version>2.3.9</version>-->
-<!--        </dependency>-->
-                <!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-aop</artifactId>-->
-<!--            <version>${spring.release}</version>-->
-<!--        </dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
-<!--        <dependency>-->
-<!--            <groupId>org.aspectj</groupId>-->
-<!--            <artifactId>aspectjrt</artifactId>-->
-<!--            <version>${aspectj.version}</version>-->
-<!--        </dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-<!--        <dependency>-->
-<!--            <groupId>org.aspectj</groupId>-->
-<!--            <artifactId>aspectjweaver</artifactId>-->
-<!--            <version>${aspectj.version}</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-webmvc</artifactId>-->
-<!--            <version>${spring.release}</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--            <version>2.13.4</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-core</artifactId>-->
-<!--            <version>2.13.4</version>-->
-<!--        </dependency>-->
-
-
-
-
-
 
     </dependencies>
 

@@ -12,6 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 import java.sql.Timestamp;
 import java.util.Collections;
 import java.util.Date;
@@ -37,7 +40,7 @@ public class TrainingJournalController {
     @Operation(summary = "Select training by id", description = "Select training by id")
     @GetMapping("/findById")
     public ResponseEntity<Object> trainingFindByIdEndpoint(
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min (1) @Parameter(
                     description = "Training id") Long userId)
     {
 
@@ -53,15 +56,15 @@ public class TrainingJournalController {
 
             @RequestParam("training_data") @Parameter(
                     description = "Training Data") Timestamp trainingData,
-            @RequestParam("user_id") @Parameter(
+            @RequestParam("user_id")  @Min(1) @Parameter(
                     description = "User id") Long userId,
-            @RequestParam("exercise_id") @Parameter(
+            @RequestParam("exercise_id") @Min(1) @Parameter(
                     description = "Exercise id") Long exerciseId,
-            @RequestParam("sets") @Parameter(
+            @RequestParam("sets") @Min(1) @Parameter(
                     description = "Sets") Long sets,
-            @RequestParam("reps") @Parameter(
+            @RequestParam("reps") @Min(1) @Parameter(
                     description = "Reps") Long reps,
-            @RequestParam("weight") @Parameter(
+            @RequestParam("weight") @Min(1) @Parameter(
                     description = "Weight") Long weight)
     {
 
@@ -91,17 +94,17 @@ public class TrainingJournalController {
 
             @RequestParam("training_data") @Parameter(
                     description = "Training Data") Timestamp trainingData,
-            @RequestParam("user_id") @Parameter(
+            @RequestParam("user_id") @Min(1) @Parameter(
                     description = "User id") Long userId,
-            @RequestParam("exercise_id") @Parameter(
+            @RequestParam("exercise_id") @Min(1) @Max(10) @Parameter(
                     description = "Exercise id") Long exerciseId,
-            @RequestParam("sets") @Parameter(
+            @RequestParam("sets") @Min(1) @Parameter(
                     description = "Sets") Long sets,
-            @RequestParam("reps") @Parameter(
+            @RequestParam("reps") @Min(1) @Parameter(
                     description = "Reps") Long reps,
-            @RequestParam("weight") @Parameter(
+            @RequestParam("weight") @Min(1) @Parameter(
                     description = "Weight") Long weight,
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "id") Long id
             )
     {
@@ -125,7 +128,7 @@ public class TrainingJournalController {
     @Operation(summary = "HARD Delete training by id", description = "HARD Delete training by id")
     @GetMapping("/HardDelete")
     public String  trainingJournalDeleteByIdEndpoint(
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "Training id") Long userId)
     {
         trainingJournalSpringDataRepository.deleteById(userId);
@@ -139,7 +142,7 @@ public class TrainingJournalController {
     @Transactional
     public ResponseEntity<Object> deleteTrainingJournal(
 
-            @RequestParam("id") @Parameter(
+            @RequestParam("id") @Min(1) @Parameter(
                     description = "id") Long id
     )
     {
