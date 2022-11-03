@@ -46,11 +46,11 @@ public class UserController {
     @GetMapping("/findById")
     public ResponseEntity<Object> userFindByIdEndpoint(
             @RequestParam("id") @Min(1) @Parameter(
-                    description = "User id") Long userId)
-    {
-
-        return new ResponseEntity<>(Collections.singletonMap("result",
-                userSpringDataRepository.findById(userId)), HttpStatus.OK);
+                    description = "User id") Long userId) {
+        if (userSpringDataRepository.existsById(userId)) {
+            return new ResponseEntity<>(Collections.singletonMap("result",
+                    userSpringDataRepository.findById(userId)), HttpStatus.OK);
+        } else return new ResponseEntity<>("User not found", HttpStatus.OK);
     }
 
     @Tag(name = "Endpoint for user", description = "CRUD operation for user")
@@ -58,10 +58,10 @@ public class UserController {
     @GetMapping("/findByGender")
     public ResponseEntity<Object> userFindAllUserByGender(@RequestParam("gender") @Parameter(
             description = "User gender") String gender) {
-
         return new ResponseEntity<>(Collections.singletonMap("result",
                 userSpringDataRepository.findUserByGender(gender)), HttpStatus.OK);
     }
+
     @Tag(name = "Endpoint for user", description = "CRUD operation for user")
     @Operation(summary = "Create new user", description = "Create new user")
     @PostMapping("/createUser")
@@ -91,16 +91,18 @@ public class UserController {
     }
 
 
-@Tag(name = "Endpoint for user", description = "CRUD operation for user")
-@Operation(summary = "HARD Delete user by id", description = "HARD Delete user by id")
-@GetMapping("/HardDelete")
-public String  userDeleteByIdEndpoint(
-        @RequestParam("id") @Min(1) @Parameter(
-                description = "User id") Long userId)
-{
-    userSpringDataRepository.deleteById(userId);
-    return "user has been deleted";
-}
+    @Tag(name = "Endpoint for user", description = "CRUD operation for user")
+    @Operation(summary = "HARD Delete user by id", description = "HARD Delete user by id")
+    @GetMapping("/HardDelete")
+    public String userDeleteByIdEndpoint(
+            @RequestParam("id") @Min(1) @Parameter(
+                    description = "User id") Long userId) {
+        if (userSpringDataRepository.existsById(userId)) {
+            userSpringDataRepository.deleteById(userId);
+            return "User has been deleted";
+        } else return "User not found";
+
+    }
 
     @Tag(name = "Endpoint for user", description = "CRUD operation for user")
     @Operation(summary = "Update user with Param", description = "Update user with Param")
@@ -115,37 +117,39 @@ public String  userDeleteByIdEndpoint(
                     description = "User birth_date") Timestamp birthDate,
             @RequestParam("user_login") @Size(min = 1, max = 50) @Parameter(
                     description = "User login") String userLogin,
-            @RequestParam("user_password") @Size(min = 8, max = 50)@Parameter(
+            @RequestParam("user_password") @Size(min = 8, max = 50) @Parameter(
                     description = "User password") String userPassword,
             @RequestParam("gender") @Parameter(
                     description = "User gender") Gender gender,
             @RequestParam("id") @Min(1) @Parameter(
-                    description = "User id") Long userId)
-    {
+                    description = "User id") Long userId) {
 
         Timestamp modificationDate = new Timestamp(new Date().getTime());
 
         String genderToString = gender.toString();
 
-        userSpringDataRepository.updateUserSuccess(userName, surName,
-                birthDate,
-                userLogin,
-                userPassword,
-                modificationDate,
-                genderToString,
-                userId);
+        if (userSpringDataRepository.existsById(userId)) {
+            userSpringDataRepository.updateUserSuccess(userName, surName,
+                    birthDate,
+                    userLogin,
+                    userPassword,
+                    modificationDate,
+                    genderToString,
+                    userId);
 
-        Map<String, Object> model = new HashMap<>();
-        model.put("userName", userName);
-        model.put("surName", surName);
-        model.put("birthDate", birthDate);
-        model.put("userLogin", userLogin);
-        model.put("userPassword", userPassword);
-        model.put("modificationDate", modificationDate);
-        model.put("gender",gender);
-        model.put("userId", userId);
+            Map<String, Object> model = new HashMap<>();
+            model.put("userName", userName);
+            model.put("surName", surName);
+            model.put("birthDate", birthDate);
+            model.put("userLogin", userLogin);
+            model.put("userPassword", userPassword);
+            model.put("modificationDate", modificationDate);
+            model.put("gender", gender);
+            model.put("userId", userId);
 
-        return new ResponseEntity<>(model, HttpStatus.OK);
+            return new ResponseEntity<>(model, HttpStatus.OK);
+        } else return new ResponseEntity<>("User not found", HttpStatus.OK);
+
     }
 
     @Tag(name = "Endpoint for user", description = "CRUD operation for user")
@@ -169,38 +173,44 @@ public String  userDeleteByIdEndpoint(
 
         String genderToString = user.getGender().toString();
 
-        userSpringDataRepository.updateUserSuccess(
-                user.getUserName(),
-                user.getSurName(),
-                user.getBirthDate(),
-                user.getCredentials().getLogin(),
-                user.getCredentials().getPassword(),
-                user.getModificationDate(),
-                genderToString,
-                user.getId());
+        if (userSpringDataRepository.existsById(user.getId())) {
+            userSpringDataRepository.updateUserSuccess(
+                    user.getUserName(),
+                    user.getSurName(),
+                    user.getBirthDate(),
+                    user.getCredentials().getLogin(),
+                    user.getCredentials().getPassword(),
+                    user.getModificationDate(),
+                    genderToString,
+                    user.getId());
 
-        Map<String, Object> model = new HashMap<>();
-        model.put("userName", user.getUserName());
-        model.put("surName", user.getSurName());
-        model.put("birthDate", user.getBirthDate());
-        model.put("userLogin", user.getCredentials().getLogin());
-        model.put("userPassword", user.getCredentials().getPassword());
-        model.put("modificationDate", user.getModificationDate());
-        model.put("gender",user.getGender());
-        model.put("userId", user.getId());
+            Map<String, Object> model = new HashMap<>();
+            model.put("userName", user.getUserName());
+            model.put("surName", user.getSurName());
+            model.put("birthDate", user.getBirthDate());
+            model.put("userLogin", user.getCredentials().getLogin());
+            model.put("userPassword", user.getCredentials().getPassword());
+            model.put("modificationDate", user.getModificationDate());
+            model.put("gender", user.getGender());
+            model.put("userId", user.getId());
 
-        return new ResponseEntity<>(model, HttpStatus.OK);
+            return new ResponseEntity<>(model, HttpStatus.OK);
+        } else return new ResponseEntity<>("User not found", HttpStatus.OK);
+
     }
+
     //  SOFT DELETE USER
     @Tag(name = "Endpoint for user", description = "CRUD operation for user")
     @Operation(summary = "SOFT Delete user by id", description = "SOFT Delete user by id")
     @GetMapping("/softDelete")
-    public String  userSoftDeleteByIdEndpoint(
+    public String userSoftDeleteByIdEndpoint(
             @RequestParam("id") @Min(1) @Parameter(
-                    description = "User id") Long userId)
-    {
-        userSpringDataRepository.softDeleteUser(userId);
-        return "user has been deleted";
+                    description = "User id") Long userId) {
+        if (userSpringDataRepository.existsById(userId)) {
+            userSpringDataRepository.softDeleteUser(userId);
+            return "User has been deleted";
+        } else return "User not found";
+
     }
 
 }

@@ -36,16 +36,18 @@ public class TrainingJournalController {
         return new ResponseEntity<>(Collections.singletonMap("result",
                 trainingJournalSpringDataRepository.findAll()), HttpStatus.OK);
     }
+
     @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
     @Operation(summary = "Select training by id", description = "Select training by id")
     @GetMapping("/findById")
     public ResponseEntity<Object> trainingFindByIdEndpoint(
-            @RequestParam("id") @Min (1) @Parameter(
-                    description = "Training id") Long userId)
-    {
-
-        return new ResponseEntity<>(Collections.singletonMap("result",
-                trainingJournalSpringDataRepository.findById(userId)), HttpStatus.OK);
+            @RequestParam("id") @Min(1) @Parameter(
+                    description = "Training id") Long userId) {
+        if (trainingJournalSpringDataRepository.existsById(userId)) {
+            return new ResponseEntity<>(Collections.singletonMap("result",
+                    trainingJournalSpringDataRepository.findById(userId)), HttpStatus.OK);
+        } else
+            return new ResponseEntity<>("Training session not found", HttpStatus.OK);
     }
 
     @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
@@ -56,7 +58,7 @@ public class TrainingJournalController {
 
             @RequestParam("training_data") @Parameter(
                     description = "Training Data") Timestamp trainingData,
-            @RequestParam("user_id")  @Min(1) @Parameter(
+            @RequestParam("user_id") @Min(1) @Parameter(
                     description = "User id") Long userId,
             @RequestParam("exercise_id") @Min(1) @Parameter(
                     description = "Exercise id") Long exerciseId,
@@ -65,13 +67,8 @@ public class TrainingJournalController {
             @RequestParam("reps") @Min(1) @Parameter(
                     description = "Reps") Long reps,
             @RequestParam("weight") @Min(1) @Parameter(
-                    description = "Weight") Long weight)
-    {
+                    description = "Weight") Long weight) {
 
-//        Timestamp modificationDate = new Timestamp(new Date().getTime());
-//                HibernateTrainingJournal hibernateTrainingJournal = trainingJournalSpringDataRepository.save(trainingJournal);
-
-//        trainingJournalSpringDataRepository.findById(1L).get().getId());
         trainingJournalSpringDataRepository.createTrainingJournalSuccess(
                 trainingData, userId, exerciseId, sets, reps, weight);
 
@@ -106,33 +103,38 @@ public class TrainingJournalController {
                     description = "Weight") Long weight,
             @RequestParam("id") @Min(1) @Parameter(
                     description = "id") Long id
-            )
-    {
+    ) {
+        if (trainingJournalSpringDataRepository.existsById(id)) {
 
-        trainingJournalSpringDataRepository.updateTrainingJournalSuccess(
-                trainingData, userId, exerciseId, sets, reps, weight, id);
+            trainingJournalSpringDataRepository.updateTrainingJournalSuccess(
+                    trainingData, userId, exerciseId, sets, reps, weight, id);
 
-        Map<String, Object> model = new HashMap<>();
-        model.put("training_data", trainingData);
-        model.put("user_id", userId);
-        model.put("exercise_id", exerciseId);
-        model.put("sets", sets);
-        model.put("reps", reps);
-        model.put("weight", weight);
-        model.put("id", id);
+            Map<String, Object> model = new HashMap<>();
+            model.put("training_data", trainingData);
+            model.put("user_id", userId);
+            model.put("exercise_id", exerciseId);
+            model.put("sets", sets);
+            model.put("reps", reps);
+            model.put("weight", weight);
+            model.put("id", id);
 
-        return new ResponseEntity<>(model, HttpStatus.OK);
+            return new ResponseEntity<>(model, HttpStatus.OK);
+        } else
+            return new ResponseEntity<>("Training session not found", HttpStatus.OK);
+
     }
-//          HARD DELETE
+
+    //          HARD DELETE
     @Tag(name = "Endpoint for training_journal", description = "CRUD operation for training_journal")
     @Operation(summary = "HARD Delete training by id", description = "HARD Delete training by id")
     @GetMapping("/HardDelete")
-    public String  trainingJournalDeleteByIdEndpoint(
+    public String trainingJournalDeleteByIdEndpoint(
             @RequestParam("id") @Min(1) @Parameter(
-                    description = "Training id") Long userId)
-    {
-        trainingJournalSpringDataRepository.deleteById(userId);
-        return "Training has been deleted";
+                    description = "Training id") Long userId) {
+        if (trainingJournalSpringDataRepository.existsById(userId)) {
+            trainingJournalSpringDataRepository.deleteById(userId);
+            return "Training has been deleted";
+        } else return "Training session not found";
     }
 
     //          SOFT DELETE
@@ -144,16 +146,17 @@ public class TrainingJournalController {
 
             @RequestParam("id") @Min(1) @Parameter(
                     description = "id") Long id
-    )
-    {
+    ) {
+        if (trainingJournalSpringDataRepository.existsById(id)) {
 
-        trainingJournalSpringDataRepository.deleteTrainingJournal(id);
+            trainingJournalSpringDataRepository.deleteTrainingJournal(id);
+            Map<String, Object> model = new HashMap<>();
+            model.put("id", id);
 
-        Map<String, Object> model = new HashMap<>();
+            return new ResponseEntity<>(model, HttpStatus.OK);
+        } else
+            return new ResponseEntity<>("Training session not found", HttpStatus.OK);
 
-        model.put("id", id);
-
-        return new ResponseEntity<>(model, HttpStatus.OK);
     }
 
 }

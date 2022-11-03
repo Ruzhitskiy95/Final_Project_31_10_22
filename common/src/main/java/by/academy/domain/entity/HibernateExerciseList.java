@@ -3,6 +3,7 @@ package by.academy.domain.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.cache.annotation.Cacheable;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
         "trainingProgram"
 })
 @Table(name = "exercise_list")
+@Cacheable("exercise_list")
 public class HibernateExerciseList {
 
     @Id
