@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @Configuration
 public class EncoderConfig {
     @Bean
-    public static NoOpPasswordEncoder passwordEncoder(){
-        return (NoOpPasswordEncoder)  NoOpPasswordEncoder.getInstance();
+    public static NoOpPasswordEncoder passwordEncoder() {
+        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
     }
 }

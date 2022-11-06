@@ -8,7 +8,6 @@ public interface RoleTableColumns {
 
     String CREATION_DATE = "creation_date";
 
-
     String MODIFICATION_DATE = "modification_date";
 }
 

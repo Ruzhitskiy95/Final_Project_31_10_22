@@ -6,13 +6,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.sql.Timestamp;
 import java.util.Objects;
+
 @Getter
 @Setter
 @EqualsAndHashCode
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
 
 public class User {
 
@@ -25,7 +25,6 @@ public class User {
     private String password;
     private Timestamp modificationDate;
     private Timestamp creationDate;
-
 
     @Override
     public String toString() {

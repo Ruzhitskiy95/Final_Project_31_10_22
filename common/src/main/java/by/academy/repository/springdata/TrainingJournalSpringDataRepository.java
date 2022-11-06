@@ -18,11 +18,10 @@ public interface TrainingJournalSpringDataRepository extends
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query(value = "insert into training_records_schema.training_journal "+
+    @Query(value = "insert into training_records_schema.training_journal " +
             "(training_data, user_id, exercise_id, sets, reps, weight) values (:training_data, " +
             ":user_id, " +
             ":exercise_id, :sets, :reps, :weight)", nativeQuery = true)
-
     void createTrainingJournalSuccess(@Param("training_data") Timestamp training_data,
                                       @Param("user_id") Long user_id,
                                       @Param("exercise_id") Long exercise_id,
@@ -40,7 +39,6 @@ public interface TrainingJournalSpringDataRepository extends
             "reps = :reps, " +
             "weight = :weight " +
             "where id = :id", nativeQuery = true)
-
     void updateTrainingJournalSuccess(@Param("training_data") Timestamp training_data,
                                       @Param("user_id") Long user_id,
                                       @Param("exercise_id") Long exercise_id,
@@ -53,7 +51,6 @@ public interface TrainingJournalSpringDataRepository extends
     @Modifying(clearAutomatically = true)
     @Query(value = "update training_records_schema.training_journal SET " +
             "is_deleted = 'true' where id = :id", nativeQuery = true)
-
     void deleteTrainingJournal(@Param("id") Long id);
 }
 

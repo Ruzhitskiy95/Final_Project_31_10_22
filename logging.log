@@ -82,3 +82,379 @@
 2022-11-03 20:29:12 INFO  CustomAspect:25 - Parameters count = 7
 2022-11-03 20:29:12 INFO  CustomAspect:34 - Method userUpdateByIdEndpoint finished
 2022-11-03 20:29:12 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 176351148
+2022-11-06 15:24:13 INFO  CustomAspect:24 - Method userFindByIdEndpoint start
+2022-11-06 15:24:13 INFO  CustomAspect:25 - Parameters count = 1
+2022-11-06 15:24:14 INFO  CustomAspect:34 - Method userFindByIdEndpoint finished
+2022-11-06 15:24:14 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 469799165
+2022-11-06 15:24:27 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 15:24:27 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:24:27 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 15:24:27 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 41733344
+2022-11-06 15:24:53 INFO  CustomAspect:24 - Method findAllRolesWithCache start
+2022-11-06 15:24:53 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:24:53 INFO  CustomAspect:34 - Method findAllRolesWithCache finished
+2022-11-06 15:24:53 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 52898930
+2022-11-06 15:25:43 INFO  CustomAspect:24 - Method topExercises start
+2022-11-06 15:25:43 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:25:43 INFO  CustomAspect:34 - Method topExercises finished
+2022-11-06 15:25:43 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 111000682
+2022-11-06 15:26:00 INFO  CustomAspect:24 - Method findExerciseListWithCache start
+2022-11-06 15:26:00 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:26:00 INFO  CustomAspect:34 - Method findExerciseListWithCache finished
+2022-11-06 15:26:00 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 83242600
+2022-11-06 15:28:21 INFO  CustomAspect:24 - Method findExerciseListWithCache start
+2022-11-06 15:28:21 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:29:48 INFO  CustomAspect:24 - Method findExerciseListWithCache start
+2022-11-06 15:29:48 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:30:56 INFO  CustomAspect:24 - Method findExerciseListWithCache start
+2022-11-06 15:30:56 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:30:57 INFO  CustomAspect:34 - Method findExerciseListWithCache finished
+2022-11-06 15:30:57 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 169948759
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:31:57 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:31:57 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:33:43 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:33:43 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:33:43 INFO  RoleRowMapper:21 - Role row mapping start
+2022-11-06 15:33:43 INFO  RoleRowMapper:30 - Role row mapping end
+2022-11-06 15:33:43 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 15:33:43 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 15:33:43 INFO  RoleRowMapper:21 - Role row mapping start
+2022-11-06 15:33:43 INFO  RoleRowMapper:30 - Role row mapping end
+2022-11-06 15:42:09 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 15:42:09 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:42:09 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 15:42:09 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 136116297
+2022-11-06 15:55:12 INFO  CustomAspect:24 - Method findAllRolesWithCache start
+2022-11-06 15:55:12 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:55:12 INFO  CustomAspect:34 - Method findAllRolesWithCache finished
+2022-11-06 15:55:12 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 63322109
+2022-11-06 15:55:37 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 15:55:37 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 15:55:37 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 15:55:37 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 58037177
+2022-11-06 16:19:44 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:19:44 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:19:44 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:19:44 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 122508389
+2022-11-06 16:21:11 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:21:11 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:21:11 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:21:11 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 125773944
+2022-11-06 16:21:20 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:21:20 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:21:21 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:21:21 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 33512577
+2022-11-06 16:22:31 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:22:31 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:22:32 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:22:32 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 130654745
+2022-11-06 16:24:09 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:24:09 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:24:09 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:24:09 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 119949742
+2022-11-06 16:24:14 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:24:14 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:24:14 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:24:14 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 25409413
+2022-11-06 16:24:19 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:24:19 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:24:19 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:24:19 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 36060104
+2022-11-06 16:26:07 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:26:07 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:26:07 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:26:07 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 130936568
+2022-11-06 16:32:01 INFO  CustomAspect:24 - Method findAllRolesWithCache start
+2022-11-06 16:32:01 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:32:01 INFO  CustomAspect:34 - Method findAllRolesWithCache finished
+2022-11-06 16:32:01 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 54272122
+2022-11-06 16:32:10 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:32:10 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:32:10 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:32:10 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 52617107
+2022-11-06 16:32:29 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:32:29 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:32:29 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:32:29 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 29895063
+2022-11-06 16:35:03 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:35:03 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:35:03 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:35:03 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 129579626
+2022-11-06 16:38:14 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:38:14 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:38:15 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:38:15 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 121934051
+2022-11-06 16:39:23 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:39:23 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:39:23 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:39:23 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 128016127
+2022-11-06 16:40:24 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:40:24 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:40:24 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:40:24 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 129755819
+2022-11-06 16:41:23 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:41:23 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:41:23 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:41:23 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 126608722
+2022-11-06 16:42:35 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:42:35 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:42:36 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:42:36 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 123688710
+2022-11-06 16:44:24 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 16:44:24 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:44:24 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 16:44:24 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 122000337
+2022-11-06 16:44:39 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 16:44:39 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 16:44:40 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 16:44:40 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 35437014
+2022-11-06 17:06:33 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:06:33 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:06:33 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:06:33 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 117871350
+2022-11-06 17:06:46 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:06:46 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:06:46 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:06:46 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 41924506
+2022-11-06 17:08:55 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:08:55 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:08:56 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:08:56 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 125271880
+2022-11-06 17:09:04 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:09:04 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:09:04 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:09:04 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 43053509
+2022-11-06 17:09:59 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:09:59 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:09:59 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:09:59 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 114568160
+2022-11-06 17:10:14 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:10:14 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:10:14 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:10:14 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 43180522
+2022-11-06 17:10:58 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:10:58 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:10:59 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:10:59 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 117144341
+2022-11-06 17:11:07 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:11:07 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:11:07 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:11:07 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 38332222
+2022-11-06 17:14:40 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:14:40 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:14:40 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:14:40 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 121859212
+2022-11-06 17:14:52 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:14:52 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:14:52 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:14:52 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 47746570
+2022-11-06 17:22:04 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:22:04 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:22:04 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:22:04 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 130807417
+2022-11-06 17:22:12 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:22:12 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:22:12 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:22:12 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 36356039
+2022-11-06 17:23:58 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:23:58 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:23:59 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:23:59 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 122295845
+2022-11-06 17:24:08 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:24:08 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:24:08 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:24:08 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 39481326
+2022-11-06 17:25:28 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:25:28 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:25:28 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:25:28 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 128811134
+2022-11-06 17:25:35 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:25:35 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:25:35 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:25:35 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 34546213
+2022-11-06 17:28:01 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:28:01 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:28:01 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:28:01 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 121467054
+2022-11-06 17:28:11 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:28:11 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:28:11 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:28:11 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 39489451
+2022-11-06 17:36:15 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:36:15 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:36:15 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:36:15 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 141398663
+2022-11-06 17:36:17 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:36:17 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:36:17 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:36:17 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 38521673
+2022-11-06 17:36:22 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:36:22 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:36:22 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:36:22 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 27745680
+2022-11-06 17:36:40 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:36:40 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:36:40 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:36:40 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 26734282
+2022-11-06 17:38:00 INFO  CustomAspect:24 - Method userDeleteByIdEndpoint start
+2022-11-06 17:38:00 INFO  CustomAspect:25 - Parameters count = 1
+2022-11-06 17:38:00 INFO  CustomAspect:34 - Method userDeleteByIdEndpoint finished
+2022-11-06 17:38:00 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 117971848
+2022-11-06 17:38:07 INFO  CustomAspect:24 - Method userDeleteByIdEndpoint start
+2022-11-06 17:38:07 INFO  CustomAspect:25 - Parameters count = 1
+2022-11-06 17:38:07 INFO  CustomAspect:34 - Method userDeleteByIdEndpoint finished
+2022-11-06 17:38:07 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 2306331
+2022-11-06 17:45:04 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:45:04 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:45:04 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:45:04 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 128892816
+2022-11-06 17:45:13 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:45:13 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:45:13 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:45:13 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 34399956
+2022-11-06 17:45:35 INFO  CustomAspect:24 - Method trainingSessionEndPoint start
+2022-11-06 17:45:35 INFO  CustomAspect:25 - Parameters count = 1
+2022-11-06 17:45:35 INFO  CustomAspect:34 - Method trainingSessionEndPoint finished
+2022-11-06 17:45:35 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 93596927
+2022-11-06 17:45:50 INFO  CustomAspect:24 - Method topTotalWeight start
+2022-11-06 17:45:50 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:45:50 INFO  CustomAspect:34 - Method topTotalWeight finished
+2022-11-06 17:45:50 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 24959950
+2022-11-06 17:46:00 INFO  CustomAspect:24 - Method topExercises start
+2022-11-06 17:46:00 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:46:00 INFO  CustomAspect:34 - Method topExercises finished
+2022-11-06 17:46:00 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 4195701
+2022-11-06 17:57:28 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 17:57:28 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:57:28 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 17:57:28 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 127177073
+2022-11-06 17:57:41 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 17:57:41 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 17:57:41 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 17:57:41 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 31285789
+2022-11-06 18:13:24 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:13:24 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:13:24 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:13:24 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 130880118
+2022-11-06 18:13:36 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:13:36 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:13:36 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:13:36 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 39478760
+2022-11-06 18:18:44 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:18:44 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:18:44 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:18:44 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 122676028
+2022-11-06 18:18:55 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:18:55 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:18:55 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:18:55 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 33313290
+2022-11-06 18:23:25 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:23:25 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:23:25 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:23:25 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 124569674
+2022-11-06 18:26:44 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:26:44 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:26:44 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:26:44 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 182886109
+2022-11-06 18:27:03 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:27:03 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:27:03 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:27:03 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 36291037
+2022-11-06 18:30:14 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:30:14 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:30:14 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:30:14 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 125373662
+2022-11-06 18:30:26 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:30:26 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:30:26 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:30:26 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 32706023
+2022-11-06 18:33:14 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:33:14 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:33:14 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:33:14 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 119634990
+2022-11-06 18:33:28 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:33:28 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:33:28 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:33:28 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 36135799
+2022-11-06 18:36:32 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:36:32 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:36:32 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:36:32 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 130496941
+2022-11-06 18:36:44 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:36:44 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:36:44 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:36:44 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 32525555
+2022-11-06 18:45:22 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:45:22 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:45:22 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:45:22 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 125523767
+2022-11-06 18:45:33 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:45:33 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:45:33 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:45:33 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 30678095
+2022-11-06 18:52:54 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:52:54 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:52:54 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:52:54 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 125430112
+2022-11-06 18:53:06 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:53:06 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:53:07 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:53:07 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 38191525
+2022-11-06 18:54:08 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:54:08 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:54:09 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:54:09 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 124463617
+2022-11-06 18:54:21 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 18:54:21 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:54:21 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 18:54:21 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 30578879
+2022-11-06 18:59:49 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 18:59:49 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 18:59:50 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 18:59:50 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 128047346
+2022-11-06 19:00:03 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 19:00:03 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 19:00:03 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 19:00:03 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 29994706
+2022-11-06 19:00:47 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 19:00:47 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 19:00:47 INFO  RoleRowMapper:21 - Role row mapping start
+2022-11-06 19:00:47 INFO  RoleRowMapper:30 - Role row mapping end
+2022-11-06 19:00:47 INFO  UserRowMapper:21 - UserRowMapping start
+2022-11-06 19:00:47 INFO  UserRowMapper:34 - UserRowMapping finish
+2022-11-06 19:00:47 INFO  RoleRowMapper:21 - Role row mapping start
+2022-11-06 19:00:47 INFO  RoleRowMapper:30 - Role row mapping end
+2022-11-06 19:03:59 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 19:03:59 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 19:03:59 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 19:03:59 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 114397955
+2022-11-06 19:15:04 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 19:15:04 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 19:15:05 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 19:15:05 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 120992787
+2022-11-06 19:16:57 INFO  CustomAspect:24 - Method trainingJournalFindAllEndpoint start
+2022-11-06 19:16:57 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 19:16:57 INFO  CustomAspect:34 - Method trainingJournalFindAllEndpoint finished
+2022-11-06 19:16:57 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 115472219
+2022-11-06 19:17:09 INFO  CustomAspect:24 - Method userFindAllEndpoint start
+2022-11-06 19:17:09 INFO  CustomAspect:25 - Parameters count = 0
+2022-11-06 19:17:09 INFO  CustomAspect:34 - Method userFindAllEndpoint finished
+2022-11-06 19:17:09 INFO  CustomAspect:35 - Total execution time StopWatch in nanoseconds: 43348589

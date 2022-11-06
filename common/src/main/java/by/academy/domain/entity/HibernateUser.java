@@ -67,7 +67,7 @@ public class HibernateUser {
     private Set<HibernateRole> roles;
 
     @OneToMany(mappedBy = "userTraining",
-    fetch = FetchType.EAGER, orphanRemoval = true)
+            fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
     private Set<HibernateTrainingJournal> trainingJournalsSets;
 

@@ -19,8 +19,6 @@ public class JdbcTemplateRoleRepository implements RoleRepositoryInterface {
 
     private final JdbcTemplate jdbcTemplate;
 
-    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
     private final RoleRowMapper rowMapper;
 
     @Override
@@ -28,53 +26,6 @@ public class JdbcTemplateRoleRepository implements RoleRepositoryInterface {
         return jdbcTemplate.queryForObject("select * from training_records_schema.roles where id = " + id, rowMapper);
     }
 
-    @Override
-    public Optional<Role> findOne(Long id) {
-        return Optional.of(findById(id));
-    }
-
-    @Override
-    public List<Role> findAll() {
-        return findAll(DEFAULT_FIND_ALL_LIMIT, DEFAULT_FIND_ALL_OFFSET);
-    }
-
-    @Override
-    public List<Role> findAll(int limit, int offset) {
-        return jdbcTemplate.query("select * from training_records_schema.roles limit " + limit + " offset " + offset, rowMapper);
-    }
-
-    @Override
-    public Role create(Role object) {
-        final String insertQuery =
-                "insert into training_records_schema.roles (role_name, creation_date, modification_date) " +
-                        " values (:roleName, :creationDate, :modificationDate);";
-
-        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-        mapSqlParameterSource.addValue("roleName", object.getRoleName());
-        mapSqlParameterSource.addValue("creationDate", object.getCreationDate());
-        mapSqlParameterSource.addValue("modificationDate", object.getModificationDate());
-
-        namedParameterJdbcTemplate.update(insertQuery, mapSqlParameterSource);
-
-        Long lastInsertId = namedParameterJdbcTemplate.query("SELECT currval('training_records_schema.roles_id_seq') as last_id",
-                resultSet -> {
-                    resultSet.next();
-                    return resultSet.getLong("last_id");
-                });
-
-        return findById(lastInsertId);
-    }
-
-    @Override
-    public Role update(Role object) {
-        return null;
-    }
-
-    @Override
-    public Long delete(Long id) {
-        jdbcTemplate.update("delete from training_records_schema.roles where id = " + id);
-        return id;
-    }
 
     @Override
     public List<Role> findRolesByUserId(Long userId) {

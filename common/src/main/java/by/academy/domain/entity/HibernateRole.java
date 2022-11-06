@@ -17,7 +17,7 @@ public class HibernateRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long id;
 
     @Column(name = "role_name")
     @Enumerated(EnumType.STRING)
@@ -32,7 +32,7 @@ public class HibernateRole {
     @ManyToMany
     @JoinTable(name = "l_role_user",
             joinColumns = @JoinColumn(name = "role_id"),
-    inverseJoinColumns = @JoinColumn(name = "user_id"))
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
 
     @JsonIgnoreProperties("roles")
     private Set<HibernateUser> users;

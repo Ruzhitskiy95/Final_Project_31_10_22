@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class NoSuchEntityException extends RuntimeException{
+public class NoSuchEntityException extends RuntimeException {
     private String customMessage;
     private Integer errorCode;
 
@@ -36,7 +36,7 @@ public class NoSuchEntityException extends RuntimeException{
         super(message, cause, enableSuppression, writableStackTrace);
         this.customMessage = customMessage;
         this.errorCode = errorCode;
-        this.exceptionId= exceptionId;
+        this.exceptionId = exceptionId;
     }
 
     @Override

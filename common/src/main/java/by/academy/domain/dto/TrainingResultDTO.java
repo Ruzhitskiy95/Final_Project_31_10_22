@@ -11,16 +11,20 @@ import java.sql.Timestamp;
 public interface TrainingResultDTO {
 
     String getUserName();
+
     String getSurName();
+
     Timestamp getTrainingData();
+
     String getExerciseName();
+
     Long getSets();
+
     Long getReps();
 
     Long getWeight();
 
     Long getTotalWeight();
-
 
 
 }

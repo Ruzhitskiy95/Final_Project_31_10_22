@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "training_journal")
 @EqualsAndHashCode(exclude = {
-        "roles", "trainingJournalsSets", "userMedicalInfo", "exerciseList", "userAnthropometrySet",
+        "roles", "trainingJournalsSets", "exerciseList", "userAnthropometrySet",
         "trainingJournalExercise", "userTraining"
 })
 public class HibernateTrainingJournal {
@@ -28,7 +28,7 @@ public class HibernateTrainingJournal {
     private Long userId;
 
     @Column(name = "exercise_id")
-    private  Long exerciseId;
+    private Long exerciseId;
 
     @Column(name = "sets")
     private Long sets;

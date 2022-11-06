@@ -3,6 +3,8 @@ package by.academy.controller;
 import by.academy.controller.requests.AuthRequest;
 import by.academy.controller.requests.AuthResponse;
 import by.academy.security.jwt.JwtTokenHelper;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,12 +27,8 @@ public class AuthenticationController {
 
     private final UserDetailsService userProvider;
 
-    //    @ApiOperation(value = "Login user in system", notes = "Return Auth-Token with user login")
-//    @ApiResponses({
-//            @ApiResponse(code = 200, message = "Successful authorization"),
-//            @ApiResponse(code = 400, message = "Request error"),
-//            @ApiResponse(code = 500, message = "Server error")
-//    })
+    @Tag(name = "Endpoint authentication token", description = "Generated authentication token")
+    @Operation(summary = "Generated authentication token", description = "Generated authentication token")
     @PostMapping
     public ResponseEntity<AuthResponse> loginUser(@RequestBody AuthRequest request) {
 
@@ -54,12 +52,4 @@ public class AuthenticationController {
         );
     }
 
-    //localhost:8080/authentication POST
-/*
-    {
-
-    "login": "login",
-    "password": "password"
-
-   }   -> new AuthRequest(login, password) */
 }

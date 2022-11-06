@@ -15,5 +15,5 @@ public class Role {
     private Long id;
     private String roleName;
     private Timestamp creationDate;
-    private  Timestamp modificationDate;
+    private Timestamp modificationDate;
 }
